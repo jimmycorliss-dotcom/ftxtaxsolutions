@@ -2,6 +2,12 @@
 
 Faithful static mirror of https://ftxtaxsolutions.com/, including ten public pages, the original styles, JavaScript, images, navigation and galleries.
 
+Live website: https://ftxtaxsolutions-ch4.pages.dev/
+
+Repository: https://github.com/jimmycorliss-dotcom/ftxtaxsolutions
+
+Cloudflare Pages is connected to this repository. Every push to `main` automatically validates, builds, and publishes production. Other branches receive preview deployments.
+
 ## Local preview
 
 Run `python -m http.server 4173 --directory public` and open http://localhost:4173/.
