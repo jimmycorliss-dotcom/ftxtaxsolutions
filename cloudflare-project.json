@@ -1,0 +1,11 @@
+{
+  "account_id": "edc6994c35cd8e5e906785bde60e02e3",
+  "project_name": "ftxtaxsolutions",
+  "project_id": "3a9422ea-57c7-415a-9d96-b2e9f5707a4f",
+  "production_branch": "main",
+  "production_url": "https://ftxtaxsolutions-ch4.pages.dev",
+  "github_repository": "jimmycorliss-dotcom/ftxtaxsolutions",
+  "build_command": "node scripts/check.mjs && node scripts/build.mjs",
+  "output_directory": "dist",
+  "automatic_production_deployments": true
+}
