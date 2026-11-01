@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "a",
+    "banks/index.html",
+    "contact-us/index.html",
+    "download-demo/index.html",
+    "index.html",
+    "reseller/index.html",
+    "software/crosslink-video-gallery/index.html",
+    "software/crosslink/index.html",
+    "software/proseries-video-gallery/index.html",
+    "software/proseries/index.html",
+    "support/index.html"
+  ],
+  "urls": 244,
+  "errors": [
+    {
+      "url": "https://ftxtaxsolutions.com/index.php/images/nuevas/xlink17demo.zip",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ftxtaxsolutions.com/media/com_uniterevolution2/assets/rs-plugin/js/+f+",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ftxtaxsolutions.com/media/com_uniterevolution2/assets/rs-plugin/js/+h+",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ftxtaxsolutions.com/media/com_uniterevolution2/assets/rs-plugin/js/+g+",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ftxtaxsolutions.com/media/com_uniterevolution2/assets/rs-plugin/js/+k+",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ftxtaxsolutions.com/media/com_uniterevolution2/assets/rs-plugin/js/+m.data(",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ftxtaxsolutions.com/media/jui/js/a.src",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ftxtaxsolutions.com/media/com_unitegallery/assets/unitegallery-plugin/js/+u+",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ]
+}

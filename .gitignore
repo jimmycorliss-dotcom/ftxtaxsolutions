@@ -1,0 +1,5 @@
+dist/
+node_modules/
+.wrangler/
+public/a
+public/images/nuevas/xlink17demo.zip
