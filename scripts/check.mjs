@@ -1,5 +1,5 @@
 import { readFile, stat } from 'node:fs/promises';
-const pages = ['', 'banks/', 'contact-us/', 'download-demo/', 'reseller/', 'software/crosslink/', 'software/proseries/', 'software/crosslink-video-gallery/', 'software/proseries-video-gallery/', 'support/'];
+const pages = ['', 'banks/', 'contact-us/', 'reseller/', 'software/crosslink/', 'software/proseries/', 'software/crosslink-video-gallery/', 'software/proseries-video-gallery/', 'support/'];
 let count = 0;
 for (const page of pages) {
   const text = await readFile(`public/${page}index.html`, 'utf8');

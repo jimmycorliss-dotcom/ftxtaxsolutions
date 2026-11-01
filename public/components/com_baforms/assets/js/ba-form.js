@@ -1529,11 +1529,6 @@ document.addEventListener('DOMContentLoaded', function(){
                     messageModal.parent().show();
                     messageModal.find('.message').html('<img src="'+dir+'components/com_baforms/assets/images/reload.svg">');    
                 }
-                // Start the installer only after the demo form passes validation.
-                // Defer until the browser has submitted the form to its target iframe.
-                if (this.id === 'baform-1' && typeof window.downloadFile === 'function') {
-                    window.setTimeout(window.downloadFile, 0);
-                }
             }
         }
 
