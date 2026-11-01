@@ -22,6 +22,6 @@ Connect this GitHub repository to Cloudflare Pages, use `main` as the production
 
 The `functions/` folder contains a narrowly scoped proxy for the existing Joomla demo request form. Form submissions are forwarded to the original site's backend; no form data is stored by this copy. End-to-end delivery depends on that backend and has not been tested by submitting personal data.
 
-The 252 MB Crosslink demo installer exceeds the Pages asset limit and remains linked to its original download URL. The Proseries demo is included locally. Embedded videos, Google Fonts, Font Awesome CDN, partner links, and the demo form service remain external dependencies. The original Joomla administration and database are not included.
+Download buttons serve the owner-supplied, Intuit-signed evaluation installer through a GitHub release. The executable is 28,526,056 bytes, above the 25 MiB Cloudflare Pages asset limit. Both legacy demo archives have been removed from the current site. Their legacy URLs redirect to the new installer. Embedded videos, Google Fonts, Font Awesome CDN, partner links, and the demo form service remain external dependencies. The original Joomla administration and database are not included.
 
 Original content, branding, and asset rights remain with their respective owners.

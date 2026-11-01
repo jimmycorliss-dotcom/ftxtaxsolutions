@@ -1,3 +1,5 @@
 /index.php / 301
 /index.php/* /:splat 301
-/images/nuevas/xlink17demo.zip https://ftxtaxsolutions.com/images/nuevas/xlink17demo.zip 302
+/downloads/EvalInstaller-Intuit.exe https://github.com/jimmycorliss-dotcom/ftxtaxsolutions/releases/download/intuit-eval-installer-4b3adabb0a40/EvalInstaller-Intuit.exe 302
+/images/nuevas/xlink17demo.zip https://github.com/jimmycorliss-dotcom/ftxtaxsolutions/releases/download/intuit-eval-installer-4b3adabb0a40/EvalInstaller-Intuit.exe 302
+/images/nuevas/proseries-demo-2017.zip https://github.com/jimmycorliss-dotcom/ftxtaxsolutions/releases/download/intuit-eval-installer-4b3adabb0a40/EvalInstaller-Intuit.exe 302
