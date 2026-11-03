@@ -6,9 +6,9 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--product', choices=['intuit', 'crosslink'], default='intuit')
 args = parser.parse_args()
 crosslink = args.product == 'crosslink'
-source = Path(r'C:\Users\anglo\OneDrive\Desktop') / ('Xlink demo.exe' if crosslink else 'EvalInstaller Intuit.exe')
-asset_name = 'Xlink-demo.exe' if crosslink else 'EvalInstaller-Intuit.exe'
-release_name = 'Crosslink Demo Installer' if crosslink else 'Intuit Evaluation Installer'
+source = Path(r'C:\Users\anglo\OneDrive\Desktop') / ('XLink24 Demo_Tax_Year_2023.exe' if crosslink else 'EvalInstaller Intuit.exe')
+asset_name = 'Crosslink-demo.exe' if crosslink else 'EvalInstaller-Intuit.exe'
+release_name = 'Crosslink Demo' if crosslink else 'Intuit Evaluation Installer'
 data = source.read_bytes()
 credentials = subprocess.run(['git', '-c', 'credential.interactive=false', 'credential', 'fill'], input='protocol=https\nhost=github.com\n\n', text=True, capture_output=True, check=True)
 values = dict(line.split('=', 1) for line in credentials.stdout.splitlines() if '=' in line)

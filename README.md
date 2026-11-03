@@ -20,7 +20,7 @@ Run `node scripts/check.mjs`, then `node scripts/build.mjs`. No dependencies are
 
 Connect this GitHub repository to Cloudflare Pages, use `main` as the production branch, set the build command to `node scripts/check.mjs && node scripts/build.mjs`, and set the output directory to `dist`. Enable automatic production deployments; each push to main then publishes a new version. Other branches can generate previews.
 
-Crosslink and home download buttons serve Xlink-demo.exe (257,436,456 bytes). ProSeries buttons serve EvalInstaller-Intuit.exe (28,526,056 bytes). Both installers are hosted as separate GitHub release assets to stay within the Cloudflare Pages asset limit. Download metadata and SHA-256 hashes are tracked in installer-crosslink.json and installer.json.
+Crosslink and home download buttons serve Crosslink-demo.exe (451,178,864 bytes). ProSeries buttons serve EvalInstaller-Intuit.exe (28,526,056 bytes). Both installers are hosted as separate GitHub release assets to stay within the Cloudflare Pages asset limit. Download metadata and SHA-256 hashes are tracked in installer-crosslink.json and installer.json.
 
 The demo form page and its server proxy have been removed. Legacy /download-demo/ and Crosslink ZIP URLs redirect directly to the Crosslink installer. Legacy ProSeries ZIP URLs redirect to the Intuit installer.
 
