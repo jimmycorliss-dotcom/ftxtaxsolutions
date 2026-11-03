@@ -1,0 +1,12 @@
+const menu=document.querySelector('.menu');
+const nav=document.querySelector('.nav');
+menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close ×':'Menu ☰';nav.classList.toggle('open',open);});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&nav?.classList.contains('open')){menu.click();menu.focus();}});
+document.addEventListener('click',event=>{document.querySelectorAll('.nav details[open]').forEach(d=>{if(!d.contains(event.target))d.removeAttribute('open');});});
+const search=document.querySelector('#video-search');
+search?.addEventListener('input',()=>{let count=0;document.querySelectorAll('.video').forEach(v=>{v.hidden=!v.textContent.toLowerCase().includes(search.value.toLowerCase());if(!v.hidden)count++;});document.querySelector('.empty').hidden=count>0;document.querySelector('#video-count').textContent=`${count} training videos`;});
+const dialog=document.querySelector('#video-player');
+document.querySelectorAll('.video').forEach(button=>button.addEventListener('click',()=>{const id=button.dataset.video;if(!/^[\w-]{11}$/.test(id))return;const frame=document.createElement('iframe');frame.src=`https://www.youtube-nocookie.com/embed/${id}?autoplay=1`;frame.title=button.textContent.trim();frame.allow='autoplay; encrypted-media; picture-in-picture';frame.allowFullscreen=true;dialog.querySelector('.player').replaceChildren(frame);dialog.querySelector('.video-title').textContent=button.textContent.trim();dialog.showModal();}));
+dialog?.querySelector('.close')?.addEventListener('click',()=>dialog.close());
+dialog?.addEventListener('close',()=>dialog.querySelector('.player').replaceChildren());
+dialog?.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
