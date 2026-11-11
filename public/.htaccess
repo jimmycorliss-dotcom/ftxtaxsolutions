@@ -1,0 +1,11 @@
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+RewriteEngine On
+RewriteRule ^index\.php$ / [R=301,L]
+RewriteRule ^index\.php/(.*)$ /$1 [R=301,L]
+RewriteRule ^images/nuevas/xlink17demo\.zip$ /downloads/Crosslink-demo.exe [R=302,L]
+RewriteRule ^images/nuevas/proseries\-demo\-2017\.zip$ /downloads/EvalInstaller-Intuit.exe [R=302,L]
+RewriteRule ^download\-demo$ /downloads/Crosslink-demo.exe [R=302,L]
+RewriteRule ^download\-demo/$ /downloads/Crosslink-demo.exe [R=302,L]
+RewriteRule ^downloads/Xlink\-demo\.exe$ /downloads/Crosslink-demo.exe [R=302,L]

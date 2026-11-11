@@ -1,0 +1,49 @@
+name: Publish to IONOS
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ionos-production
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate and build website
+        run: |
+          node scripts/check.mjs
+          node scripts/build.mjs
+      - name: Install SFTP client
+        run: sudo apt-get update -qq && sudo apt-get install -y lftp
+      - name: Upload website to IONOS
+        env:
+          LFTP_PASSWORD: ${{ secrets.IONOS_SFTP_PASSWORD }}
+        run: |
+          test -n "$LFTP_PASSWORD" || { echo "::error::Set the IONOS_SFTP_PASSWORD repository secret"; exit 1; }
+          mkdir -p ~/.ssh
+          echo 'home742845375.1and1-data.host ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINbBMvvDjN4IP04VAZlDH42A+HL25ifeIK9CorAvaMA/' > ~/.ssh/known_hosts
+          lftp --env-password -u acc1247307234 sftp://home742845375.1and1-data.host <<'LFTP'
+          set cmd:fail-exit yes
+          set net:max-retries 2
+          set net:timeout 30
+          set sftp:connect-program "ssh -a -x -o StrictHostKeyChecking=yes -o HostKeyAlgorithms=ssh-ed25519"
+          set xfer:use-temp-file yes
+          mirror --reverse --transfer-all --parallel=4 --exclude-glob downloads/ --exclude-glob _redirects dist/ /
+          bye
+          LFTP
+      - name: Verify published homepage and demo endpoints
+        run: |
+          curl --fail --silent --show-error "https://ftxtaxsolutions.com/?deploy=$GITHUB_SHA" | cmp dist/index.html -
+          for file in Crosslink-demo.exe EvalInstaller-Intuit.exe; do
+            curl --fail --silent --show-error --head "https://ftxtaxsolutions.com/downloads/$file" > /dev/null
+          done
